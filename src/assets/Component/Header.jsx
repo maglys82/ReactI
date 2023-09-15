@@ -1,7 +1,7 @@
 function Header(props) {
     return (
         <>
-            <div>
+            <div className="title">
                 <h2>{props.encabezado} </h2>
             </div>
         </>
