@@ -58,3 +58,10 @@ img{
   color: #888;
 }
 
+.gallery{
+  display: flex;
+  justify-content: center;
+  gap: 5px;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}

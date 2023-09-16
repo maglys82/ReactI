@@ -1,19 +1,24 @@
 import React from 'react';
 import Tags from "./Tags";
+import CardBootstrap from 'react-bootstrap/Card';
+
 
 function Card(props) {
 
 
     return (
-        <div className="cardDog card">
-            <div>
-            <img width={250} src={props.imagen} />    
-            </div>
-            <h2>{props.nombre}</h2>
-            <p>{props.descripcion}</p>
-            <Tags color = {props.colorfondo} text={props.texto} />
-            
-        </div>
+
+        <CardBootstrap className="cardDog card" style={{ width: '18rem' }}>
+            <CardBootstrap.Img variant="top" src={props.imagen} />
+            <CardBootstrap.Body>
+                <CardBootstrap.Title>{props.nombre}</CardBootstrap.Title>
+                <CardBootstrap.Text>
+                    {props.descripcion}
+                </CardBootstrap.Text>
+                <Tags color={props.colorfondo} text={props.texto} />
+            </CardBootstrap.Body>
+        </CardBootstrap>
+
     );
 }
 export default Card
